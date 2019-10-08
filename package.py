@@ -31,6 +31,7 @@ uuid = "zlib-{version}".format(version=str(version))
 
 def commands():
     env.LD_LIBRARY_PATH.prepend("{root}/lib")
+    env.PKG_CONFIG_PATH.prepend("{root}/share/pkgconfig")
 
     # Helper environment variables.
     env.ZLIB_INCLUDE_PATH.set("{root}/include")
